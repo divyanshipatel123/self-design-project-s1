@@ -48,10 +48,10 @@
     <a-plane id="road" repeat="5 5" position="0 -10 -163.73258" geometry="height:400;width:200;depth:10" rotation="-90 0 0" color="grey" visible="false"></a-plane>
 
     <!--Nav-mesh-->
-    <a-entity id="navigationMesh" gltf-model="#collider" position="0 0 0" nav-mesh visible="false" ></a-entity><!--position y=10-->
+    <a-entity id="navigationMesh" gltf-model="#collider" position="0 10 0" nav-mesh visible="false" ></a-entity><!--position y=10-->
         
     <!--Camera rig-->
-    <a-entity id="cameraRig" movement-controls="speed:0.5; constraintToNavMesh:true" position="0 1 5" rotation="0 0 0" drive game="play">
+    <a-entity id="camerarig" movement-controls="speed:0.5; constrainToNavMesh:true" position="0 1 5" rotation="0 0 0" drive game="play">
 
       <a-entity id="camera" camera position="0 1.6 0" rotation="0 0 0" look-controls="pointerLockEnabled:false">
 
@@ -60,7 +60,7 @@
         <a-box id="break" src="./assets/c189assets-main/assets/break.png" position="-0.425 -0.23391 -0.37136" scale="0.05 0.06 0.001" color="grey"></a-box>
        
         <!--steering wheel-->
-        <a-entity id="wheel" gltf-model="#wheel" position="0.15 -0.15 -0.2" scale="0.001 0.001 0.001" rotation="0 0 0"></a-entity>
+        <a-entity id="steeringWheel" gltf-model="#wheel" position="0.15 -0.15 -0.2" scale="0.001 0.001 0.001" rotation="0 0 0"></a-entity>
 
         <!--texts-->
         <a-entity id="timer" position="0 5 -7.1" text="font:kelsonsans;align:center;width:10;color:black;value:00:00"></a-entity>
