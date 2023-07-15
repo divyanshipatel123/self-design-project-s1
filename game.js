@@ -3,7 +3,7 @@ AFRAME.registerComponent("game" , {
         gameState: {type:"string" , default:"play"}
     },
     init: function(){
-        var duration = 60;
+        var duration = 300;
         var timerEl = document.querySelector("#timer")
         this.start_timer(duration , timerEl)
     },
@@ -24,7 +24,7 @@ AFRAME.registerComponent("game" , {
                 duration -= 1
             }else{
                 this.data.gameState = "over"
-                cameraRig = document.querySelector("#cameraRig")
+                cameraRig = document.querySelector("#camerarig")
                 cameraRig.setAttribute("velocity" , {x:0 , y:0 , z:0})
                 var over = document.querySelector("#over")
                 over.setAttribute("visible" , true)
