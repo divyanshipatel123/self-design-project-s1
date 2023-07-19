@@ -57,7 +57,9 @@ AFRAME.registerComponent("drive",{
                     var accelerateCar = document.querySelector("#acc")
                     accelerateCar.setAttribute("material" , "color","green")
                     var carSpeed = document.querySelector("#speed")
-                    carSpeed.setAttribute("text" , {value:multiply})   
+                    carSpeed.setAttribute("text" , {value:multiply}) 
+                    var sound = document.querySelector("#sound1")
+                    sound.components.sound.playSound()  
                 }
             }
             if(e.code === "Space"){
@@ -86,6 +88,9 @@ AFRAME.registerComponent("drive",{
                 }
                 var accCar = document.querySelector("#acc")
                 accCar.setAttribute("material" , "color" , "grey")
+
+                var sound = document.querySelector("#sound1")
+                sound.components.sound.stopSound()
             }
         })
 
